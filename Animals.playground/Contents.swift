@@ -58,13 +58,11 @@ class Cheetah : Cat{
     }
     //Add a sleep function to the Cheetah class that adds 50 health, make sure its health doesn't go over 200.
     func sleep() {
-        if health <= 200 {
+        if health < 200 {
             health += 50
-            if health > 200{
-                health = 200
-            }
             
         } else{
+            health = 200
             print("your health is full")
         }
     }
@@ -102,7 +100,7 @@ cat.run()
 
 //creating an object of Cheetah class
 var cheeta = Cheetah(name: "Caty")
-
+print("============================= Cheetah ===============================")
 print(cheeta.displayHealth())
 cheeta.run()
 cheeta.run()
@@ -130,6 +128,7 @@ print(cheeta.displayHealth())
 //creating an object of Lion class
 
 var lion = Lion(name: "Simba")
+print("============================= Lion ===============================")
 
 lion.run()
 lion.run()
