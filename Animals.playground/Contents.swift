@@ -47,7 +47,7 @@ class Cat: Animal{
 
 class Cheetah : Cat{
     //Override the Cheetah's run method to print "Running Fast" and deduct 50 health
-    override func run() {
+    override func run()  {
         if health < 50 {
             print("Cheetah is dead tired and need some sleep")
         } else{
@@ -55,9 +55,10 @@ class Cheetah : Cat{
              print("Running Fast")
         }
      
+     
     }
     //Add a sleep function to the Cheetah class that adds 50 health, make sure its health doesn't go over 200.
-    func sleep() {
+    func sleep() -> Cheetah {
         if health < 200 {
             health += 50
             
@@ -65,7 +66,9 @@ class Cheetah : Cat{
             health = 200
             print("your health is full")
         }
+        return self
     }
+    
 }
 
 
@@ -108,21 +111,21 @@ cheeta.run()
 cheeta.run()
 
 print(cheeta.displayHealth())
-
-cheeta.sleep()
+//test chaining
+cheeta.sleep().sleep().sleep()
 print(cheeta.displayHealth())
 
-cheeta.sleep()
-print(cheeta.displayHealth())
-
-cheeta.sleep()
-print(cheeta.displayHealth())
-
-cheeta.sleep()
-print(cheeta.displayHealth())
-
-cheeta.sleep()
-print(cheeta.displayHealth())
+//cheeta.sleep()
+//print(cheeta.displayHealth())
+//
+//cheeta.sleep()
+//print(cheeta.displayHealth())
+//
+//cheeta.sleep()
+//print(cheeta.displayHealth())
+//
+//cheeta.sleep()
+//print(cheeta.displayHealth())
 
 
 //creating an object of Lion class
